@@ -62,7 +62,7 @@ class TransposeTrack(TuneflowPlugin):
         }
 
     @staticmethod
-    def run(song: Song, params: dict[str, Any]):
+    def run(song: Song, params: Dict[str, Any]):
         pitch_offset = params["pitchOffset"]
         trigger: TuneflowPluginTriggerData = params["trigger"]
         track_id = trigger["entities"][0]["trackId"]

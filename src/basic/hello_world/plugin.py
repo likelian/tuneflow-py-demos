@@ -1,5 +1,5 @@
 from tuneflow_py import TuneflowPlugin, Song, ParamDescriptor
-from typing import Any
+from typing import Any, Dict
 
 
 class HelloWorld(TuneflowPlugin):
@@ -12,11 +12,11 @@ class HelloWorld(TuneflowPlugin):
         return "hello-world"
 
     @staticmethod
-    def params(song: Song) -> dict[str, ParamDescriptor]:
+    def params(song: Song) -> Dict[str, ParamDescriptor]:
         return {}
 
     @staticmethod
-    def run(song: Song, params: dict[str, Any]):
+    def run(song: Song, params: Dict[str, Any]):
         """
         Do nothing except printing "hello world".
 
